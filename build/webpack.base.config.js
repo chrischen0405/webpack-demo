@@ -5,15 +5,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   mode: 'production',
   // 入口文件
-  entry: path.join(__dirname, 'src', 'index.js'),
+  entry: path.resolve(__dirname, '../src/index.js'),
   // 输出文件
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src', 'index.html'),
+      template: path.resolve(__dirname, '../src/index.html'),
       filename: 'index.html'
     })
   ],
@@ -21,6 +21,6 @@ module.exports = {
     // 端口
     port: 8090,
     // 静态资源目录
-    static: path.join(__dirname, 'dist')
+    static: path.resolve(__dirname, 'dist')
   }
 }
