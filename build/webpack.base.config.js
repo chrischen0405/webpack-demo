@@ -8,7 +8,7 @@ module.exports = {
   entry: path.resolve(__dirname, '../src/index.js'),
   // 输出文件
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js'
   },
   plugins: [
@@ -21,6 +21,6 @@ module.exports = {
     // 端口
     port: 8090,
     // 静态资源目录
-    static: path.resolve(__dirname, 'dist')
+    static: path.resolve(__dirname, '../dist')
   }
 }
